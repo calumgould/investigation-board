@@ -1,0 +1,26 @@
+{
+  "name": "investigation-board",
+  "private": true,
+  "version": "0.0.1",
+  "author": {
+    "name": "Calum Gould"
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "build:dev": "tsc && vite build",
+    "prettier": "prettier --write .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "rollup-plugin-copy": "^3.5.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "investigation-board",
+  "title": "Investigation Board",
+  "description": "A module for the Investigation Board system on Foundry.",
+  "authors": [
+    {
+      "name": "Calum Gould"
+    }
+  ],
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "systems": [],
+  "relationships": {
+    "systems": [],
+    "requires": []
+  },
+  "socket": true,
+  "esmodules": ["scripts/module.js"],
+  "packFolders": [],
+  "packs": []
+}
