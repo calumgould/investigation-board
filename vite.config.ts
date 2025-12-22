@@ -49,6 +49,14 @@ const updateModuleManifestPlugin = (): Plugin => {
 export default defineConfig({
   build: {
     sourcemap: true,
+    rollupOptions: {
+      input: 'src/scripts/module.ts',
+      output: {
+        dir: 'dist/scripts',
+        entryFileNames: 'module.js',
+        format: 'es',
+      },
+    },
   },
   plugins: [
     cleanBuild(),

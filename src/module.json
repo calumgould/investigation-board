@@ -8,6 +8,7 @@
   "systems": [],
   "relationships": { "systems": [], "requires": [] },
   "socket": true,
+  "esmodules": ["scripts/module.js"],
   "packFolders": [],
   "packs": []
 }
