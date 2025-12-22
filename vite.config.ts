@@ -67,7 +67,6 @@ export default defineConfig({
         { src: 'src/lang', dest: 'dist' },
         { src: 'src/styles', dest: 'dist' },
         { src: 'src/templates', dest: 'dist' },
-        { src: 'src/scripts', dest: 'dist/scripts' },
       ],
       hook: 'writeBundle',
     }),
