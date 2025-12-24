@@ -19,7 +19,7 @@ export const NOTE_TEXT_PROPERTIES = {
   FONT_SIZE: 16,
   COLOR: '#000000',
   OPACITY: 1.0,
-  PADDING: 10, // Padding on each side for text wrapping
+  PADDING: 10,
 } as const
 
 export const DRAWING_PROPERTIES = {
