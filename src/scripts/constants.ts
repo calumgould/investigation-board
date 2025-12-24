@@ -20,3 +20,15 @@ export const DRAWING_PROPERTIES = {
   STROKE_ALPHA: 1.0,
   STROKE_WIDTH: 20,
 } as const
+
+export const NOTE_DIMENSIONS = {
+  WIDTH: 200,
+  HEIGHT: 200,
+} as const
+
+export const NOTE_COLORS = {
+  YELLOW: '#fff9c4',
+  RED: '#ef9a9a',
+  GREEN: '#a5d6a7',
+  BLUE: '#90caf9',
+} as const

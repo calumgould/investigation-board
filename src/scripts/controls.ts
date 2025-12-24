@@ -1,26 +1,32 @@
 import { createBlankBoard } from './board'
+import { createNote } from './note'
 
-export const registerControls = (): void => {
-  Hooks.on('getSceneControlButtons', (controls) => {
-    const drawingControls = controls.drawings || controls.notes
+export const registerControls = (controls: Record<string, SceneControls.Control>): void => {
+  const drawingControls = controls.drawings || controls.notes
 
-    if (!drawingControls) {
-      console.warn('Investigation Board: Could not find drawings or notes control. Available controls:', Object.keys(controls))
-      return
-    }
+  if (!drawingControls) {
+    return
+  }
 
-    drawingControls.tools['createInvestigationBoard'] = {
-      name: 'createInvestigationBoard',
-      title: 'Create Investigation Board',
-      icon: 'fas fa-clipboard',
-      button: true,
-      order: 100,
-      onChange: (_event: Event, _active: boolean) => {
-        createBlankBoard()
-      },
-    }
+  drawingControls.tools['createInvestigationBoard'] = {
+    name: 'createInvestigationBoard',
+    title: 'Create Investigation Board',
+    icon: 'fas fa-clipboard',
+    button: true,
+    order: 100,
+    onChange: (_event: Event, _active: boolean) => {
+      createBlankBoard()
+    },
+  }
 
-    console.log('Investigation Board: Button added to scene controls')
-  })
+  drawingControls.tools['createNote'] = {
+    name: 'createNote',
+    title: 'Create Note',
+    icon: 'fas fa-sticky-note',
+    button: true,
+    order: 101,
+    onChange: (_event: Event, _active: boolean) => {
+      createNote()
+    },
+  }
 }
-

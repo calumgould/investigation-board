@@ -5,6 +5,8 @@ Hooks.once('init', () => {
   registerSettings()
 })
 
-Hooks.once('ready', () => {
-  registerControls()
+Hooks.once('ready', () => {})
+
+Hooks.on('getSceneControlButtons', (controls) => {
+  registerControls(controls)
 })
