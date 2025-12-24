@@ -3,10 +3,7 @@ import { COLORS } from './constants.js'
 
 export const MODULE_ID = moduleData.id
 
-/**
- * Register all module settings
- */
-export function registerSettings(): void {
+export const registerSettings = (): void => {
   if (!game.settings) {
     console.error('game.settings is not available')
     return
@@ -20,7 +17,6 @@ export function registerSettings(): void {
     scope: 'world',
     config: true,
     type: String,
-    default: COLORS.BACKGROUND_DEFAULT
+    default: COLORS.BACKGROUND_DEFAULT,
   })
 }
-
