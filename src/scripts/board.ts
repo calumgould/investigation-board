@@ -1,5 +1,5 @@
 import { MODULE_ID } from './settings'
-import { COLORS, BOARD_DIMENSIONS, DRAWING_PROPERTIES } from './constants'
+import { COLORS, BOARD_DIMENSIONS, DRAWING_PROPERTIES, Z_INDEX } from './constants'
 
 export const createBlankBoard = async (): Promise<void> => {
   if (!canvas?.scene || !canvas.drawings) {
@@ -35,6 +35,7 @@ export const createBlankBoard = async (): Promise<void> => {
       author: game.user.id,
       x,
       y,
+      z: Z_INDEX.BOARD,
       shape: { width: boardWidth, height: boardHeight },
       fillType: foundry.CONST.DRAWING_FILL_TYPES.SOLID,
       fillColor: backgroundColor,
@@ -58,4 +59,3 @@ export const createBlankBoard = async (): Promise<void> => {
     ui.notifications.info('Blank investigation board created!')
   }
 }
-

@@ -15,6 +15,13 @@ export const TEXT_PROPERTIES = {
   ALPHA: 1.0,
 } as const
 
+export const NOTE_TEXT_PROPERTIES = {
+  FONT_SIZE: 16,
+  COLOR: '#000000',
+  OPACITY: 1.0,
+  PADDING: 10, // Padding on each side for text wrapping
+} as const
+
 export const DRAWING_PROPERTIES = {
   FILL_ALPHA: 1.0,
   STROKE_ALPHA: 1.0,
@@ -32,3 +39,8 @@ export const NOTE_COLORS = {
   GREEN: '#a5d6a7',
   BLUE: '#90caf9',
 } as const
+
+export const Z_INDEX = {
+  BOARD: 10,
+  NOTE: 11,
+}
